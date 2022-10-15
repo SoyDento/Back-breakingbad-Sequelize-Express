@@ -37,29 +37,4 @@ Para levantar la app, por si queres ver cómo va la página (recordá que para a
 `npm start`
 
 
-## REACT - REDUX
-
-Vas a trabajar en los siguientes archivos (Cada archivo tiene su archivo de test correspondiente). Para el desarrollo de esta aplicación, te recomendamos seguir este camino:
-
-1. App.js
-2. components/Nav/Nav.jsx
-3. redux/actions/index.js
-4. redux/reducer/index.js
-5. components/Houses/Houses.jsx
-6. components/HouseCard/HouseCard.jsx
-7. components/HouseDetail/HouseDetail.jsx
-8. components/CharacterCard/CharacterCard.jsx
-9. components/CreateHouse/CreateHouse.jsx
-
-Vas a tener que ir leyendo **cada archivo de test por componente** y la descripción de cada uno para ir avanzando.
-
->Los tests se encuentran comentados. Para poder correrlos tendras que cambiar el `xdescribe` de cada archivo .test.js por `describe`.
-
->Lee bien los tests y lo que piden, sobre todo los detalles.
-
-
->Esta aplicacion esta pensada para que pasen los tests, y que tenga la funcionalidad que buscamos, NO tiene estilos por lo que los componentes se veran muy precarios. Luego de rendir, los animo a que le den los estilos que gusten!
-
->Debes completar 44 de los 55 tests que se encuentran en el CP
-
 MUCHAS GRACIAS A LOS CREADORES DE LA DB Y LA CONSIGNA DE ESTE ENTRENAMIENTO !!
