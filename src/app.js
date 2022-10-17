@@ -20,7 +20,7 @@ server.use((req, res, next) => {
   // para Node localhost
   // res.header('Access-Control-Allow-Origin', `http://localhost:${FRONT}`); // '*' --- update to match the domain you will make the request from
   // para HEROKU
-  res.header('Access-Control-Allow-Origin', CORS_URL); // '*' --- update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Origin', '*' ); // CORS_URL --- update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
