@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 // const { FRONT } = require('./db.js'); // para Node localhost
-const { CORS_URL } = require('./db.js'); // para Node localhost
+const { CORS_URL } = process.env; // para Node localhost
 
 require('./db.js');
 
