@@ -3,29 +3,29 @@ const { Sequelize, Op } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 //Para Node localhost -----
-// const {
-//   DB_USER, DB_PASSWORD, DB_HOST, PORT, FRONT
-// } = process.env;
-//
-// const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_HOST}/breakingbad`, {
-//   logging: false, // set to console.log to see the raw SQL queries
-//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-// });
+const {
+  DB_USER, DB_PASSWORD, DB_HOST, PORT, FRONT
+} = process.env;
+
+const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@localhost:${DB_HOST}/breakingbad`, {
+  logging: false, // set to console.log to see the raw SQL queries
+  native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+});
 
 //Para HEROKU  -----
-const { DATABASE_URL, CORS_URL } = process.env;
-
-const sequelize = new Sequelize(DATABASE_URL, {
-  logging: false, // set to console.log to see the raw SQL queries
-  native: false, // lets Sequelize know we can use pg-native for ~30% more speed}
-  // configuración adicional HEROKU
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
-  },
-});
+// const { DATABASE_URL, CORS_URL } = process.env;
+//
+// const sequelize = new Sequelize(DATABASE_URL, {
+//   logging: false, // set to console.log to see the raw SQL queries
+//   native: false, // lets Sequelize know we can use pg-native for ~30% more speed}
+//   // configuración adicional HEROKU
+//   dialectOptions: {
+//     ssl: {
+//       require: true,
+//       rejectUnauthorized: false
+//     }
+//   },
+// });
 
 const basename = path.basename(__filename);
 

@@ -3,8 +3,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
-// const { FRONT } = require('./db.js'); // para Node localhost
-const { CORS_URL } = require('./db.js'); // para Node localhost
+const { FRONT } = require('./db.js'); // para Node localhost
+// const { CORS_URL } = require('./db.js'); // para Node localhost
 
 require('./db.js');
 
@@ -18,9 +18,9 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 server.use((req, res, next) => {
   // para Node localhost
-  // res.header('Access-Control-Allow-Origin', `http://localhost:${FRONT}`); // '*' --- update to match the domain you will make the request from
+  res.header('Access-Control-Allow-Origin', `http://localhost:${FRONT}`); // '*' --- update to match the domain you will make the request from
   // para HEROKU
-  res.header('Access-Control-Allow-Origin', CORS_URL); // '*' --- update to match the domain you will make the request from
+  // res.header('Access-Control-Allow-Origin', CORS_URL); // '*' --- update to match the domain you will make the request from
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
